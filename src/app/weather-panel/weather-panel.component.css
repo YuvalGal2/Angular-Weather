@@ -1,0 +1,15 @@
+.weather-container{
+    height:500px;
+    background-color: cadetblue;
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+}
+.city-weather{
+    display: flex;
+    background-color: azure;
+    flex:1;
+    border:1px solid black;
+    
+    height:100%;
+}
