@@ -1,7 +1,3 @@
 <div class="weather-container">
-    <div class="city-weather"></div>
-    <div class="city-weather"></div>
-    <div class="city-weather"></div>
-    <div class="city-weather"></div>
-    <div class="city-weather"></div>
+        <app-city class="city-weather" *ngFor="let city of citiesArray"  [cityName]="city"></app-city>
 </div>

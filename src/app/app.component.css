@@ -1,7 +1,9 @@
 *{
     display: flex;
-    border:1px;
     width:100%;
     min-height: 700px;
-    border:1px solid #333;
+}
+.weather-panel{
+    width: 90%;
+    margin: auto;
 }

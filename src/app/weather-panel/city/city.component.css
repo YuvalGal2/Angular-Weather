@@ -1,0 +1,50 @@
+.container{
+    
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    background-color:white;
+    outline:2px solid #333;
+}
+
+.card-title{
+    max-width: 100%;
+    height:80px;
+    margin-bottom:10px;
+}
+.title{
+    font-size: 1.2rem;
+    color:black;
+    font-weight: 400;
+}
+.line{
+    width:100%;
+    background-color: #333;
+}
+.loading{
+    position: relative;
+    top:200px;
+    display: flex;
+    justify-content: center;
+}
+.detail{
+    margin-top:7px;
+    margin-bottom:7px;
+}
+.detail-text{
+    padding-left:10px;
+    font-weight: 400;
+    margin:4px 0px;
+    color:black;
+}
+.cloud-level-bar{
+    width:75%;
+    margin:auto;
+}
+.no-padding{
+    padding:none !important;
+}
+.margin-top-big{
+    margin-top:50px;
+}
