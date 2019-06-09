@@ -9,24 +9,26 @@ import { Component, OnInit,Input } from '@angular/core';
 export class CityComponent implements OnInit {
   // get the city name from the perent component.
   @Input() cityName:City["name"];
-  cityDetails:City = new City();
+  cityDetails:City;
   displayLoading:boolean;
-
+  
   constructor(private dataservice:DataService) { 
     this.displayLoading = true;
   }
+
+  onContainerClicked(){
+    this.dataservice.setReportForCity(this.cityName);
+  }
+  
 
   ngOnInit() {
   // use that very city name to get the data of the city from the service
     this.dataservice.getCurrentWeatherByName(this.cityName).subscribe((response:City) => {
     this.cityDetails = response;
-    console.log(this.cityDetails);
+    //console.log(this.cityDetails);
     this.displayLoading = false;
     },(error:any) => {
       console.log("ERROR!!!");
     })
   }
- 
-
-
 }

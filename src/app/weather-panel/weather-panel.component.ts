@@ -1,3 +1,4 @@
+import { DataService } from './../shared/data.service';
 import { CitiesService } from './../shared/cities.service';
 import { Component, OnInit } from '@angular/core';
 import { City } from './city/city.model'
@@ -7,11 +8,10 @@ import { City } from './city/city.model'
   styleUrls: ['./weather-panel.component.css']
 })
 export class WeatherPanelComponent implements OnInit {
-  
   citiesArray:City["name"][] = [];
-  constructor(private citiesservice:CitiesService) { 
-  
-  }
+  constructor(private citiesservice:CitiesService,private dataservice:DataService) { }
+
+ 
   ngOnInit() {
     // get 5 random cities from cities list.
      this.citiesservice.getRandomCities().subscribe((cities:City[]) => {

@@ -3,11 +3,14 @@
     display: flex;
     flex-basis: 100%;
     overflow: hidden;
-    min-height:700px;
+    min-height:400px;
     justify-content: space-between;
     flex-direction: column;
 }
 
+.next-hours-report{
+    border:1px solid red;
+}
 .city{
     height: 350px;
     border-top:1px solid black;

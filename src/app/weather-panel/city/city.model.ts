@@ -12,22 +12,4 @@ export class City{
     visibility: number;
     weather: [];
     wind:object;
-
-    constructor(){
-        // initalize the object with temp values...
-        this.name = "Loading...";
-        this.base = "";
-        this.clouds = {};
-        this.cod = 0;
-        this.coord  = {};
-        this.dt  = 0;
-        this.id = 0;
-        this.main = {};
-        this.sys  = {};
-        this.timezone = 0;
-        this. visibility = 0;
-        this.weather = [];
-        this.wind = {};
-    
-    }
 }
