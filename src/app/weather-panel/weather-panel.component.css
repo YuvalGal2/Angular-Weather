@@ -1,13 +1,33 @@
-.weather-container{
-    height:500px;
+
+.feature-container{
     display: flex;
-    flex-direction: row;
     flex-basis: 100%;
+    overflow: hidden;
+    min-height:700px;
+    justify-content: space-between;
+    flex-direction: column;
 }
-.city-weather{
-    display: flex;
-    background-color: azure;
-    flex-basis: 20%;
-   
-    height:100%;
+
+.city{
+    height: 350px;
+    border-top:1px solid black;
+    border-bottom:1px solid black;
 }
+.city:not(:first-child){
+    margin-top:40px;
+
+}
+
+@media (min-width: 768px){
+    .feature-container{
+        width:80%;
+        margin:auto;
+        flex-direction: row;
+
+    }
+    .city:not(:first-child){
+        margin-top:0px;
+    
+    }
+}
+

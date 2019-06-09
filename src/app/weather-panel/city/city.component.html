@@ -1,32 +1,35 @@
-<div class="container"  *ngIf="displayLoading">
-    <div class="loading" >
-        <mat-progress-spinner  mode="indeterminate" color="accent"></mat-progress-spinner>
-    </div>
-</div>
-
-
-<div class="container"  *ngIf="!displayLoading">
-    <div class="row card-title">
-        <p class="text-center title">{{cityDetails.name}}</p>
-    </div>
-    <hr class="line">
-    
-    <div class="row detail text-center margin-top-big">
-        <span class="detail-text no-padding">Clouds: {{cityDetails.clouds.all}} / 100%</span>
-        <div class="cloud-level-bar">
-             <mat-progress-bar mode="determinate" value={{cityDetails.clouds.all}}></mat-progress-bar>
+<div class="container">
+    <div class="loading-container"  *ngIf="displayLoading">
+        <div class="loading" >
+            <mat-progress-spinner  mode="indeterminate" color="accent"></mat-progress-spinner>
         </div>
     </div>
-
-    <div class="row detail">
-        <p class="detail-text" >Humidity: {{cityDetails.main.humidity}}%</p>
-    </div>
-    <div class="row detail">
-        <p class="detail-text">Tempartue: {{cityDetails.main.temp}}F</p>
-    </div>
     
-    <div class="row detail">
-        <p class="detail-text"><b>Weather:</b></p> 
-        <p class="detail-text">{{cityDetails.weather[0].description | titlecase}}</p>
-    </div>
+    
+    <div class="card"  *ngIf="!displayLoading">
+        <div class="row card-title">
+            <p class="text-center title">{{cityDetails.name}}</p>
+        </div>
+        
+        <div class="details">
+        <div class="row detail text-center margin-top-big">
+            <span class="detail-text no-padding">Clouds: {{cityDetails.clouds.all}} / 100%</span>
+            <div class="cloud-level-bar">
+                 <mat-progress-bar mode="determinate" value={{cityDetails.clouds.all}}></mat-progress-bar>
+            </div>
+        </div>
+    
+        <div class="row detail">
+            <p class="detail-text" >Humidity: {{cityDetails.main.humidity}}%</p>
+        </div>
+        <div class="row detail">
+            <p class="detail-text">Tempartue: {{cityDetails.main.temp}}F</p>
+        </div>
+        
+        <div class="row detail">
+            <p class="detail-text"><b>Weather:</b></p> 
+            <p class="detail-text">{{cityDetails.weather[0].description | titlecase}}</p>
+        </div>
+     </div>
+  </div>
 </div>

@@ -8,6 +8,7 @@ import { WeatherPanelComponent } from './weather-panel/weather-panel.component';
 import { CityComponent } from '../app/weather-panel/city/city.component';
 import { MaterialModule } from './shared/material/material.module';
 import { HttpClientModule } from '@angular/common/http';
+import { NextHoursReportComponent } from './weather-panel/next-hours-report/next-hours-report.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     WeatherPanelComponent,
     CityComponent,
+    NextHoursReportComponent,
 
   ],
   imports: [
