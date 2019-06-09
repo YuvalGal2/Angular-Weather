@@ -11,17 +11,16 @@ export class NextHoursReportComponent implements OnInit {
  
   private detailedReport : Report;
   private lastHoursReports:Report[] = [];
-  constructor(private dataservice:DataService) {
-    
-   }
+
+  constructor(private dataservice:DataService) {}
 
   ngOnInit() {
     this.dataservice.getNextHoursReport().subscribe((report:Report) => {
        this.detailedReport = report; 
        this.getLastRecords();
     })
-  
   }
+
   getLastRecords(){
     if(this.detailedReport.list){
       const currentDayReport = this.detailedReport.list[0];
@@ -29,8 +28,6 @@ export class NextHoursReportComponent implements OnInit {
       const lastThreeReports = this.detailedReport.list.slice(0,30);
       this.lastHoursReports = lastThreeReports.filter(report => report.dt_txt.split(' ')[0] == currentDay);  
     }
-    
-   
   }
 
 }

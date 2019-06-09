@@ -4,5 +4,4 @@ export interface Report{
     cnt: number;
     list:any;
     city:object;
-
 }
