@@ -8,7 +8,8 @@ import { WeatherPanelComponent } from './weather-panel/weather-panel.component';
 import { CityComponent } from '../app/weather-panel/city/city.component';
 import { MaterialModule } from './shared/material/material.module';
 import { HttpClientModule } from '@angular/common/http';
-import { NextHoursReportComponent } from './weather-panel/next-hours-report/next-hours-report.component';
+import { NextHoursReportsComponent } from './weather-panel/next-hours-reports/next-hours-reports.component';
+import { ReportComponent } from './weather-panel/next-hours-reports/report/report.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { NextHoursReportComponent } from './weather-panel/next-hours-report/next
     AppComponent,
     WeatherPanelComponent,
     CityComponent,
-    NextHoursReportComponent,
+    NextHoursReportsComponent,
+    ReportComponent,
 
   ],
   imports: [

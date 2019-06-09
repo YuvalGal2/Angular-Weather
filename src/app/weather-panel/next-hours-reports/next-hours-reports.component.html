@@ -1,0 +1,7 @@
+
+<div class="report-container">
+    <div class="row">
+        <p>Hourly report ({{reportDate}})</p>
+    </div>
+    <app-report [report]="singleReport" *ngFor="let singleReport of lastHoursReports" ></app-report>
+</div>

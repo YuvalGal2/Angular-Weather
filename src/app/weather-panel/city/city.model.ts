@@ -1,5 +1,6 @@
 export interface City{
     name:string;
+    base:string;
     clouds:object;
     cod:number;
     coord:object;
