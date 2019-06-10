@@ -4,8 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MaterialModule } from './material/material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from '../app-routing.module';
+import { TemperaturePipe } from './temperature.pipe';
 @NgModule({
-  declarations: [],
+  declarations: [TemperaturePipe],
   imports: [
     CommonModule,
     BrowserModule,
@@ -16,7 +17,8 @@ import { AppRoutingModule } from '../app-routing.module';
     HttpClientModule,
     AppRoutingModule,
     CommonModule,
-    BrowserModule
+    BrowserModule,
+    TemperaturePipe
   ]
 })
 export class SharedModule { }

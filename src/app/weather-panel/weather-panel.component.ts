@@ -9,11 +9,15 @@ import { City } from './city/city.model'
 })
 export class WeatherPanelComponent implements OnInit {
   citiesArray:string[] = [];
+  displayHoursReport:boolean;
+
   constructor(private citiesservice:CitiesService,private dataservice:DataService) { }
 
  
   ngOnInit() {
-    // get 5 random cities from cities list.
+    this.dataservice.getNextHoursReportStatus().subscribe((status:boolean) => {
+      this.displayHoursReport = status;
+    })
      this.citiesservice.getRandomCities().subscribe((cities:City[]) => {
       for(let i=0; i<5; i++){
         const randomIndex = Math.floor((Math.random()*cities.length+1));

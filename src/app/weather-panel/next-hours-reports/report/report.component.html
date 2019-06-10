@@ -1,3 +1,8 @@
-<p>
-  report works!
-</p>
+<div class="report-container">
+  <div class="row">
+    <span>Report Time : {{time}}</span>
+  </div>
+  <div class="row">
+    <span>Weather: {{report.weather[0].main}}, Temp: {{report.main.temp | temperature}}</span>
+  </div>
+</div>

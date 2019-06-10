@@ -10,18 +10,20 @@ import { retryWhen, delayWhen } from 'rxjs/operators';
 })
 export class DataService {
   constructor(private _httpclient:HttpClient) { }
-  private displayAssignedReport:boolean;
+  private displayAssignedReport = new BehaviorSubject(false);
   private cityName:string;
   private nextHoursReport = new BehaviorSubject({});
 
+ 
   setReportForCity(cityName:string){
-    if(!this.displayAssignedReport){
-      this.displayAssignedReport = true;
-    }
     this.cityName = cityName;
+    this.displayAssignedReport.next(true);
     this.setNextHoursReport();
   }
 
+  getNextHoursReportStatus(){
+    return this.displayAssignedReport;
+  }
   getNextHoursReport(){
     return this.nextHoursReport;
   }
