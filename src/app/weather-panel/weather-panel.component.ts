@@ -8,7 +8,7 @@ import { City } from './city/city.model'
   styleUrls: ['./weather-panel.component.css']
 })
 export class WeatherPanelComponent implements OnInit {
-  citiesArray:City["name"][] = [];
+  citiesArray:string[] = [];
   constructor(private citiesservice:CitiesService,private dataservice:DataService) { }
 
  

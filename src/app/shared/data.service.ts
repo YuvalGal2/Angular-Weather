@@ -11,10 +11,10 @@ import { retryWhen, delayWhen } from 'rxjs/operators';
 export class DataService {
   constructor(private _httpclient:HttpClient) { }
   private displayAssignedReport:boolean;
-  private cityName:City["name"];
+  private cityName:string;
   private nextHoursReport = new BehaviorSubject({});
 
-  setReportForCity(cityName:City["name"]){
+  setReportForCity(cityName:string){
     if(!this.displayAssignedReport){
       this.displayAssignedReport = true;
     }
@@ -31,7 +31,7 @@ export class DataService {
     })
    }
 
-  getCurrentWeatherByName(name:City["name"]){
+  getCurrentWeatherByName(name:string){
     return this._httpclient.get(`http://api.openweathermap.org/data/2.5/weather?q=${name}&appid=14881de1fa074c6cd3a525ce6c87151e`)
     .pipe(retryWhen(errors =>
       errors.pipe(

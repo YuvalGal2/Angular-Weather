@@ -8,7 +8,7 @@ import { Component, OnInit,Input } from '@angular/core';
 })
 export class CityComponent implements OnInit {
   // get the city name from the perent component.
-  @Input() cityName:City["name"];
+  @Input() cityName:string;
   cityDetails:City;
   displayLoading:boolean;
   
